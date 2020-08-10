@@ -4,4 +4,4 @@ metadata:
   name: mongo
   namespace: mongo
 spec:
-  host: mongocluster2route
+  host: mongo-cluster2.apps.ocp4-vegasaro-ed14-ipi.azure.opentlc.com
