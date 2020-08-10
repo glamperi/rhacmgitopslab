@@ -3,4 +3,4 @@ kind: Route
 metadata:
   name: the-route
 spec:
-  host: changeme
+  host: ${ROUTE_CLUSTER3}
