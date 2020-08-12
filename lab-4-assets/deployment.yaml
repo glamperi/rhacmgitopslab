@@ -16,7 +16,7 @@ spec:
         app: httpd
     spec:
       containers:
-      - image: centos:7 
+      - image: centos/httpd
         name: httpd
         ports:
         - containerPort: 8080
