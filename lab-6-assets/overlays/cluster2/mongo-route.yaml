@@ -4,4 +4,4 @@ metadata:
   name: mongo
   namespace: mongo
 spec:
-  host: mongo-cluster2.apps.ocp4-vegasaro-ed14-ipi.azure.opentlc.com
+  host: mongo-cluster2.apps.cluster2.sandbox135.opentlc.com
