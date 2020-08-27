@@ -1,4 +1,4 @@
-#---------------------------------------------------------------------
+##---------------------------------------------------------------------
 # Example configuration for a possible web application.  See the
 # full configuration options online.
 #
@@ -70,14 +70,11 @@ frontend  main
 #---------------------------------------------------------------------
 backend app
     balance roundrobin
-<<<<<<< HEAD
-    option httpchk GET / HTTP/1.1\r\nHost:\ <pacman_lb_hostname>
-=======
     option httpchk GET / HTTP/1.1\r\nHost:\ pacman-ingress.apps.k2qbrnl1.eastus2.aroapp.io
     http-request set-header Host pacman-ingress.apps.k2qbrnl1.eastus2.aroapp.io
->>>>>>> 43f73ccae1381defd826ad8f6b083b61933c1ed6
     mode http 
-        server <server1_name> <server1_pacman_route>:<route_port> check
-        server <server2_name> <server2_pacman_route>:<route_port> check
-        server <server3_name> <server3_pacman_route>:<route_port> check
+        server cluster1 pacman.apps.cluster-4ba3.4ba3.sandbox1213.opentlc.com:80 check
+        server cluster2 pacman.apps.cluster2.sandbox135.opentlc.com:80 check
+        server cluster3 pacman.apps.cluster3.sandbox135.opentlc.com:80 check
+
 
