@@ -70,7 +70,12 @@ frontend  main
 #---------------------------------------------------------------------
 backend app
     balance roundrobin
+<<<<<<< HEAD
     option httpchk GET / HTTP/1.1\r\nHost:\ <pacman_lb_hostname>
+=======
+    option httpchk GET / HTTP/1.1\r\nHost:\ pacman-ingress.apps.k2qbrnl1.eastus2.aroapp.io
+    http-request set-header Host pacman-ingress.apps.k2qbrnl1.eastus2.aroapp.io
+>>>>>>> 43f73ccae1381defd826ad8f6b083b61933c1ed6
     mode http 
         server <server1_name> <server1_pacman_route>:<route_port> check
         server <server2_name> <server2_pacman_route>:<route_port> check
