@@ -15,20 +15,4 @@ spec:
     app: httpd
   sessionAffinity: None
   type: ClusterIP
----
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: httpd
-  annotations:
-    kubernetes.io/ingress.class: addon-http-application-routing
-spec:
-  rules:
-  - host: httpd.b0e856baa594479e85c4.westus2.aksapp.io
-    http:
-      paths:
-      - backend:
-          serviceName: httpd
-          servicePort: 8080
-        path: /
 
