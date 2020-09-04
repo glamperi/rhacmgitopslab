@@ -3,9 +3,10 @@ kind: PlacementRule
 metadata:
   labels:
     app: httpd
-  name: cluster4only
+  name: cluster-aks
   namespace: simple-app
 spec:
   clusterSelector:
     matchLabels:
-      clusterid: cluster4 
+      clusterid: cluster1
+ 

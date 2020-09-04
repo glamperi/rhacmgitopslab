@@ -1,0 +1,17 @@
+apiVersion: v1
+clusters:
+- cluster:
+    server: https://daddylonglegs-dns-54ec89d9.hcp.eastus.azmk8s.io:443
+  name: daddylonglegs
+contexts:
+- context:
+    cluster: daddylonglegs
+    user: clusterUser_DefaultResourceGroup-EUS_daddylonglegs
+  name: daddylonglegs
+current-context: daddylonglegs
+kind: Config
+preferences: {}
+users:
+- name: clusterUser_DefaultResourceGroup-EUS_daddylonglegs
+  user:
+    token: 5f502af8dad5977cc0b40c4bb1f45f9ad769baa947e4ed660aa52b6a3deebdacf40fe791d1d2c735f7215fd720e6b6c03a78f8e15e89834f1605be7e7d1bd9dd

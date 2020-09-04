@@ -1,0 +1,32 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: httpd
+  namespace: simple-app
+  selfLink: /api/v1/namespaces/simple-app/services/httpd
+  uid: 1c052d10-ea1b-463a-8d03-adfda3e8cde5
+  resourceVersion: '266637'
+  creationTimestamp: '2020-09-02T00:40:11Z'
+  labels:
+    app: httpd
+  annotations:
+    apps.open-cluster-management.io/hosting-deployable: simple-app/federation-Service-httpd
+    apps.open-cluster-management.io/hosting-subscription: simple-app/httpd
+    apps.open-cluster-management.io/sync-source: subgbk8s-simple-app/httpd
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: httpd
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+  rules:
+  - host: httpd.b0e856baa594479e85c4.westus2.aksapp.io
+    http:
+      paths:
+      - backend:
+          serviceName: httpd
+          servicePort: 8080
+        path: /
+

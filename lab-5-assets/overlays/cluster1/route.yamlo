@@ -1,0 +1,6 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: the-route
+spec:
+  host: web-app.apps.cluster-4ba3.4ba3.sandbox1213.opentlc.com
